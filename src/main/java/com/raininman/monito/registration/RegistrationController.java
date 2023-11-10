@@ -1,8 +1,5 @@
 package com.raininman.monito.registration;
 
-import com.raininman.monito.appuser.AppUserService;
-import com.raininman.monito.email.EmailService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +17,11 @@ public class RegistrationController {
     @PostMapping
     public String register(@RequestBody RegistrationRequest request){
         return registrationService.register(request);
+    }
+
+    @GetMapping(path = "confirm")
+    public String confirm(@RequestParam("token") String token) {
+        return registrationService.confirmToken(token);
     }
 
 }

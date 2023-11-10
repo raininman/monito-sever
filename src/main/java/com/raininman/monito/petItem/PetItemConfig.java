@@ -1,7 +1,5 @@
 package com.raininman.monito.petItem;
 
-
-import com.raininman.monito.email.EmailRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
